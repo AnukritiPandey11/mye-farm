@@ -1,81 +1,142 @@
+import {
+  Wheat,
+  Search,
+  ShieldCheck,
+  Recycle,
+} from "lucide-react";
+
+const values = [
+  {
+    icon: Wheat,
+    title: "Farmer-Owned",
+    description:
+      "Built around rural producers and fairer access to digital markets.",
+  },
+  {
+    icon: Search,
+    title: "Traceable",
+    description:
+      "Clear sourcing, transparent communication, and direct order support.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Authentic",
+    description:
+      "Regional staples with no blending, no adulterants, and real farm character.",
+  },
+  {
+    icon: Recycle,
+    title: "Sustainable",
+    description:
+      "Community-led partnerships that strengthen local food systems.",
+  },
+];
+
 export default function OurStory() {
   return (
     <section
       id="story"
-      className="py-28 bg-gradient-to-b from-[#F8F6F1] to-[#EEF4EE]"
+      className="py-28 bg-[#F8F6F1]"
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-          {/* Image Section */}
-          <div className="relative group rounded-[36px] overflow-hidden shadow-2xl">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-  <img
-    src="/images/story-image.jpg"
-    alt="Mye Farm Story"
-    className="
-      w-full
-      h-auto
-      object-cover
-      transition-all
-      duration-700
-      group-hover:scale-105
-    "
-  />
+          {/* Left Image */}
+          <div className="group bg-white rounded-[36px] shadow-2xl p-6">
 
+            <img
+              src="/images/story-image.jpg"
+              alt="About Mye Farm"
+              className="
+                w-full
+                h-auto
+                object-contain
+                rounded-[28px]
+                transition-all
+                duration-700
+                group-hover:scale-[1.02]
+              "
+            />
 
           </div>
 
-          {/* Content Section */}
+          {/* Right Content */}
           <div>
 
-            <div className="inline-block px-5 py-2 rounded-full bg-[#EAF3E8] text-[#0B5D35] text-sm font-medium mb-6">
-              Our Story
-            </div>
+            {/* Label */}
+            <p className="uppercase tracking-[0.3em] text-[#C9952C] font-semibold mb-4 text-sm">
+              WHO WE ARE
+            </p>
 
-            <div className="w-20 h-1 bg-[#C9952C] rounded-full mb-8"></div>
-
+            {/* Heading */}
             <h2 className="font-serif text-5xl md:text-6xl font-bold text-[#0B5D35] leading-tight mb-8">
-              Preserving Heritage,
-              <br />
-              Empowering Farmers.
+              About Mye Farm
             </h2>
 
-            <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              Mye Farm was created with a simple belief:
-              India's indigenous grains and traditional farming wisdom
-              deserve not only to survive — but to thrive.
+            {/* Description */}
+            <p className="text-gray-700 text-xl leading-relaxed mb-12">
+              Mye Farm is an agri-tech enabled company based in
+              Bhubaneswar, Odisha. We work closely with rural farmers,
+              NGOs and Self Help Groups to bridge the gap between farm
+              produce and end customers through transparent digital
+              channels.
             </p>
 
-            <p className="text-gray-700 text-lg leading-relaxed mb-6">
-              We partner directly with tribal farmers, rural communities,
-              NGOs and women Self Help Groups across Odisha to bring
-              authentic farm produce directly to modern kitchens.
-            </p>
+            {/* Value Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
-            <p className="text-gray-700 text-lg leading-relaxed mb-10">
-              Every order helps preserve biodiversity, support sustainable
-              agriculture and strengthen rural livelihoods for generations
-              to come.
-            </p>
+              {values.map((value, index) => {
+                const Icon = value.icon;
 
-            <a
-              href="#products"
-              className="
-                inline-block
-                bg-[#0B5D35]
-                text-white
-                px-8
-                py-4
-                rounded-full
-                hover:bg-[#C9952C]
-                transition-all
-                duration-300
-                shadow-lg
-              "
-            >
-              Explore Our Products
-            </a>
+                return (
+                  <div
+                    key={value.title}
+                    className="
+                      group
+                      bg-white
+                      rounded-3xl
+                      p-6
+                      border border-[#ECE7DC]
+                      hover:shadow-xl
+                      hover:-translate-y-2
+                      transition-all
+                      duration-500
+                    "
+                  >
+                    {/* Icon */}
+                    <div
+                      className={`
+                        w-14 h-14
+                        rounded-2xl
+                        flex
+                        items-center
+                        justify-center
+                        mb-6
+                        ${
+                          index % 2 === 0
+                            ? "bg-[#F5E8C7] text-[#C9952C]"
+                            : "bg-[#E7F3EA] text-[#0B5D35]"
+                        }
+                      `}
+                    >
+                      <Icon size={24} strokeWidth={2} />
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-xl font-semibold text-[#082D1A] mb-3">
+                      {value.title}
+                    </h3>
+
+                    {/* Description */}
+                    <p className="text-gray-600 leading-relaxed">
+                      {value.description}
+                    </p>
+                  </div>
+                );
+              })}
+
+            </div>
 
           </div>
         </div>

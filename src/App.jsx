@@ -6,6 +6,9 @@ import FeaturedProducts from "./pages/home/sections/FeaturedProducts";
 import Footer from "./components/layout/Footer";
 import OurStory from "./pages/home/sections/OurStory";
 import FloatingWhatsApp from "./components/ui/FloatingWhatsApp";
+import HowItWorks from "./pages/home/sections/HowItWorks";
+import Testimonials from "./pages/home/sections/Testimonials";
+import ShippingInfo from "./pages/home/sections/ShippingInfo";
 function App() {
   return (
     <div>
@@ -14,7 +17,10 @@ function App() {
       <Statistics />
       <WhyChooseUs />
       <OurStory />
+      <HowItWorks />
       <FeaturedProducts />
+      <ShippingInfo />
+      <Testimonials />
       <Footer />
       <FloatingWhatsApp />
     </div>
