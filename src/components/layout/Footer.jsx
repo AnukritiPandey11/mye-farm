@@ -1,63 +1,60 @@
-import {
-  Instagram,
-  Linkedin,
-  MessageCircle,
-  Mail,
-  MapPin,
-} from "lucide-react";
-
 export default function Footer() {
   return (
     <footer
       id="contact"
-      className="bg-[#0B5D35] text-[#F8F5EE] pt-24 pb-10"
+      className="bg-[#003B22] text-[#F8F5EE] pt-24 pb-10"
     >
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Top Section */}
-        <div className="grid lg:grid-cols-4 gap-12 pb-16 border-b border-white/10">
+        {/* Main Footer */}
+        <div className="grid lg:grid-cols-3 gap-16 pb-14 border-b border-white/10">
 
-          {/* Brand */}
-          <div className="lg:col-span-2">
+          {/* Brand Section */}
+          <div>
             <img
               src="/logo.png"
-              alt="Mye Farm"
-              className="h-14 mb-6"
+              alt="Mye Farm Logo"
+              className="h-16 mb-8"
             />
 
-            <h2 className="font-serif text-4xl mb-6">
-              Preserving Odisha's
-              <br />
-              Agricultural Heritage
-            </h2>
-
-            <p className="text-white/70 max-w-md leading-relaxed">
-              Connecting farming communities directly with modern
-              kitchens while preserving indigenous grains and
-              traditional agricultural wisdom.
+            <p className="text-white/75 leading-relaxed text-lg max-w-sm">
+              Empowering rural farmers through direct digital market access
+              and bringing authentic farm produce to homes across India.
             </p>
           </div>
 
-          {/* Navigation */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-[#C9952C] uppercase tracking-[0.25em] text-sm mb-6">
-              Explore
+            <h3 className="text-[#C9952C] uppercase tracking-[0.25em] text-sm font-semibold mb-8">
+              Quick Links
             </h3>
 
-            <div className="flex flex-col gap-4">
-              <a href="#products" className="hover:text-[#C9952C] transition">
+            <div className="flex flex-col gap-5 text-lg">
+              <a
+                href="#products"
+                className="hover:text-[#C9952C] transition duration-300"
+              >
                 Products
               </a>
 
-              <a href="#story" className="hover:text-[#C9952C] transition">
+              <a
+                href="#story"
+                className="hover:text-[#C9952C] transition duration-300"
+              >
                 Our Story
               </a>
 
-              <a href="#impact" className="hover:text-[#C9952C] transition">
+              <a
+                href="#impact"
+                className="hover:text-[#C9952C] transition duration-300"
+              >
                 Impact
               </a>
 
-              <a href="#contact" className="hover:text-[#C9952C] transition">
+              <a
+                href="#contact"
+                className="hover:text-[#C9952C] transition duration-300"
+              >
                 Contact
               </a>
             </div>
@@ -65,60 +62,61 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-[#C9952C] uppercase tracking-[0.25em] text-sm mb-6">
-              Connect
+            <h3 className="text-[#C9952C] uppercase tracking-[0.25em] text-sm font-semibold mb-8">
+              Contact
             </h3>
 
-            <div className="space-y-5">
+            <div className="space-y-5 text-lg text-white/80">
+
+              <p>
+                N2/24, IRC Village,<br />
+                Bhubaneswar, Odisha
+              </p>
+
+              <p>
+                +91 70777 69100
+              </p>
+
+              <p>
+                support@mye.farm
+              </p>
 
               <a
-                href="https://wa.me/917077769100"
+                href="https://www.instagram.com/mye.farm?igsh=MTF6MXRvOTAzZ2Nscw=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 hover:text-[#C9952C] transition"
+                className="hover:text-[#C9952C] transition duration-300"
               >
-                <MessageCircle size={18} />
-                WhatsApp Orders
+                @mye.farm
               </a>
 
-              <div className="flex items-center gap-3 text-white/70">
-                <Mail size={18} />
-                contact@myefarm.com
-              </div>
-
-              <div className="flex items-center gap-3 text-white/70">
-                <MapPin size={18} />
-                Odisha, India
-              </div>
-
-              <div className="flex gap-4 pt-4">
-                <a
-                  href="#"
-                  className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C9952C] transition"
-                >
-                  <Instagram size={18} />
-                </a>
-
-                <a
-                  href="#"
-                  className="w-11 h-11 rounded-full bg-white/10 flex items-center justify-center hover:bg-[#C9952C] transition"
-                >
-                  <Linkedin size={18} />
-                </a>
-              </div>
             </div>
           </div>
         </div>
 
-        {/* Bottom */}
-        <div className="pt-8 flex flex-col md:flex-row justify-between items-center text-white/50 text-sm gap-4">
-          <p>
-            © 2026 Mye Farm. All rights reserved.
-          </p>
+        {/* Bottom Footer */}
+        <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/60">
 
           <p>
-            Straight from Farmers to Your Kitchen.
+            © 2025 Mye Farm. All rights reserved.
           </p>
+
+          <div className="flex gap-6">
+            <a
+              href="#"
+              className="hover:text-[#C9952C] transition duration-300"
+            >
+              Privacy
+            </a>
+
+            <a
+              href="#"
+              className="hover:text-[#C9952C] transition duration-300"
+            >
+              Terms
+            </a>
+          </div>
+
         </div>
       </div>
     </footer>
