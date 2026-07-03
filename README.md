@@ -1,16 +1,99 @@
-# React + Vite
+# 🌾 Mye Farm
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A premium heritage agriculture platform connecting indigenous farming communities of Odisha directly with modern kitchens.
 
-Currently, two official plugins are available:
+![Mye Farm Banner](public/images/hero-bg.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Live Demo
 
-## React Compiler
+Coming Soon...
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the ESLint configuration
+- 🌾 Premium Hero Section with custom Odisha heritage artwork
+- 📊 Impact statistics section
+- ❤️ Story-driven brand narrative
+- 🌱 Heritage product showcase
+- 📱 WhatsApp ordering integration
+- 🎨 Responsive modern UI
+- ⚡ Smooth animations using Framer Motion
+- 📌 Sticky navigation with smooth scrolling
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Built With
+
+- React
+- Vite
+- Tailwind CSS
+- Framer Motion
+
+---
+
+## 📂 Project Structure
+
+```text
+src/
+│
+├── components/
+│   ├── layout/
+│   │   ├── Navbar.jsx
+│   │   └── Footer.jsx
+│
+├── pages/
+│   └── home/
+│       └── sections/
+│           ├── Hero.jsx
+│           ├── Statistics.jsx
+│           ├── WhyChooseUs.jsx
+│           ├── OurStory.jsx
+│           ├── FeaturedProducts.jsx
+│           ├── LogisticsPipeline.jsx
+│           └── ContactSection.jsx
+│
+├── utils/
+│   └── whatsappLink.js
+```
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/AnukritiPandey11/mye-farm.git
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run locally:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🌍 Vision
+
+Mye Farm aims to preserve indigenous grains, support local farming communities, and create transparent farm-to-kitchen supply chains across India.
+
+---
+
+## 👩‍💻 Developer
+
+Built by **Anukriti Pandey**
+
+- GitHub: https://github.com/AnukritiPandey11
+- LinkedIn: Add your LinkedIn link here
+
+---
+
+## 📜 License
+
+This project was developed for Mye Farm and is intended for business use.
