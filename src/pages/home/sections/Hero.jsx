@@ -1,13 +1,31 @@
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 export default function Hero() {
+    const { scrollY } = useScroll();
+
+const backgroundY = useTransform(
+  scrollY,
+  [0, 800],
+  [0, 250]
+);
   return (
-    <section
-      className="min-h-screen bg-cover bg-center flex items-center justify-center px-6 relative overflow-hidden"
-      style={{
-        backgroundImage: "url('/images/hero-bg.png')",
-      }}
-    >
+    <motion.section
+  style={{
+    backgroundPositionY: backgroundY,
+    backgroundImage: "url('/images/hero-bg.png')",
+    backgroundSize: "cover",
+    backgroundPositionX: "center",
+  }}
+  className="
+    min-h-screen
+    flex
+    items-center
+    justify-center
+    px-6
+    relative
+    overflow-hidden
+  "
+>
       {/* Dark cinematic overlay */}
       <div className="absolute inset-0 bg-black/55"></div>
 
@@ -22,7 +40,7 @@ export default function Hero() {
           Premium Heritage Agriculture
         </p>
 
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-white">
+        <h1 className="font-serif text-5xl md:text-7xl lg:text-8xl font-bold leading-tight text-white">
           Straight from Farmers
           <br />
           to Your <span className="text-yellow-300">Kitchen</span>
@@ -49,6 +67,6 @@ export default function Hero() {
 
       {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-white to-transparent"></div>
-    </section>
+    </motion.section>
   );
 }

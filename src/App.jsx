@@ -5,6 +5,7 @@ import WhyChooseUs from "./pages/home/sections/WhyChooseUs";
 import FeaturedProducts from "./pages/home/sections/FeaturedProducts";
 import Footer from "./components/layout/Footer";
 import OurStory from "./pages/home/sections/OurStory";
+import FloatingWhatsApp from "./components/ui/FloatingWhatsApp";
 function App() {
   return (
     <div>
@@ -15,6 +16,7 @@ function App() {
       <OurStory />
       <FeaturedProducts />
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }

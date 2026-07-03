@@ -1,66 +1,108 @@
+import {
+  Wheat,
+  Handshake,
+  Scissors,
+  Truck,
+} from "lucide-react";
+
 const features = [
   {
-    icon: "🌾",
+    id: 1,
+    number: "01",
+    icon: Wheat,
     title: "Heritage Grains",
     description:
-      "Rare indigenous rice varieties preserved from generations of farming traditions.",
+      "Preserving rare indigenous crop varieties and protecting Odisha's agricultural heritage for future generations.",
   },
   {
-    icon: "🤝",
+    id: 2,
+    number: "02",
+    icon: Handshake,
     title: "Direct Farmer Partnerships",
     description:
-      "We work directly with farmers, tribal communities and women SHGs across Odisha.",
+      "Working directly with tribal farmers and women self-help groups to ensure fair and transparent sourcing.",
   },
   {
-    icon: "✂️",
+    id: 3,
+    number: "03",
+    icon: Scissors,
     title: "Zero Middlemen",
     description:
-      "Straight from the farm to your kitchen without unnecessary intermediaries.",
+      "Removing unnecessary intermediaries so more value reaches farming communities where it truly belongs.",
   },
   {
-    icon: "🚚",
+    id: 4,
+    number: "04",
+    icon: Truck,
     title: "Pan India Delivery",
     description:
-      "Secure packaging and delivery across India with WhatsApp order support.",
+      "Delivering authentic heritage produce safely and directly to homes across India.",
   },
 ];
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-green-50">
-      <div className="max-w-6xl mx-auto px-6">
-        <div className="text-center mb-16">
-          <p className="uppercase tracking-[0.3em] text-green-700 font-semibold mb-4">
-            Why Mye Farm
+    <section
+      id="why"
+      className="py-24 bg-gradient-to-b from-[#faf8f3] to-white"
+    >
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section Heading */}
+        <div className="text-center max-w-3xl mx-auto mb-20">
+          <p className="uppercase tracking-[0.35em] text-[#C9952C] font-semibold mb-4">
+            Why Choose Mye Farm
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold">
-            More than a marketplace.
+          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#082D1A] leading-tight">
+            More than a Marketplace
           </h2>
 
-          <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-            We are building a movement to preserve indigenous agriculture while
-            supporting farming communities across Odisha.
+          <p className="mt-6 text-gray-600 text-lg leading-relaxed">
+            Every grain we deliver carries the story of communities,
+            traditions, and farming practices that deserve to survive in a
+            rapidly industrializing world.
           </p>
         </div>
 
+        {/* Cards */}
         <div className="grid md:grid-cols-2 gap-8">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="bg-white p-8 rounded-3xl shadow-sm hover:shadow-lg transition"
-            >
-              <div className="text-4xl mb-4">{feature.icon}</div>
+          {features.map((feature, index) => {
+            const Icon = feature.icon;
 
-              <h3 className="text-2xl font-bold mb-3">
-                {feature.title}
-              </h3>
+            return (
+              <div
+                key={feature.id}
+                className="group bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-2xl hover:-translate-y-3 transition-all duration-500"
+              >
+                {/* Number + Icon */}
+                <div className="flex items-center justify-between mb-8">
+                  <span className="text-gray-300 font-bold text-lg tracking-widest">
+                    {feature.number}
+                  </span>
 
-              <p className="text-gray-600 leading-relaxed">
-                {feature.description}
-              </p>
-            </div>
-          ))}
+                  <div
+                    className={`w-16 h-16 rounded-2xl flex items-center justify-center transition duration-500 ${
+                      index % 2 === 0
+                        ? "bg-green-100 text-green-700 group-hover:bg-green-700 group-hover:text-white"
+                        : "bg-yellow-100 text-yellow-700 group-hover:bg-yellow-600 group-hover:text-white"
+                    }`}
+                  >
+                    <Icon size={30} strokeWidth={1.8} />
+                  </div>
+                </div>
+
+                {/* Title */}
+                <h3 className="font-serif text-2xl font-bold text-[#082D1A] mb-4">
+                  {feature.title}
+                </h3>
+
+                {/* Description */}
+                <p className="text-gray-600 leading-relaxed text-lg">
+                  {feature.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
