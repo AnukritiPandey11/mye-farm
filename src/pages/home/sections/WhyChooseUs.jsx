@@ -3,40 +3,46 @@ import {
   Handshake,
   Scissors,
   Truck,
+  ShieldCheck,
+  Sprout,
 } from "lucide-react";
 
 const features = [
   {
-    id: 1,
-    number: "01",
     icon: Wheat,
-    title: "Heritage Grains",
+    title: "Direct From Farmers",
     description:
-      "Preserving rare indigenous crop varieties and protecting Odisha's agricultural heritage for future generations.",
+      "Produce is sourced directly from farming communities so growers stay closer to the value they create.",
   },
   {
-    id: 2,
-    number: "02",
-    icon: Handshake,
-    title: "Direct Farmer Partnerships",
-    description:
-      "Working directly with tribal farmers and women self-help groups to ensure fair and transparent sourcing.",
-  },
-  {
-    id: 3,
-    number: "03",
     icon: Scissors,
-    title: "Zero Middlemen",
+    title: "No Middlemen",
     description:
-      "Removing unnecessary intermediaries so more value reaches farming communities where it truly belongs.",
+      "A simple digital ordering model keeps the supply chain transparent and unnecessary layers out.",
   },
   {
-    id: 4,
-    number: "04",
+    icon: Handshake,
+    title: "NGO & SHG Partnerships",
+    description:
+      "We collaborate with NGOs and Self Help Groups to support rural producers at the source.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Quality Assured",
+    description:
+      "Products are checked before dispatch for freshness, authenticity and clean packaging.",
+  },
+  {
+    icon: Sprout,
+    title: "Indigenous Varieties",
+    description:
+      "Discover regional rice, lentils and oils with taste profiles rooted in local food traditions.",
+  },
+  {
     icon: Truck,
     title: "Pan India Delivery",
     description:
-      "Delivering authentic heritage produce safely and directly to homes across India.",
+      "Orders are packed securely and shipped across India with WhatsApp-based coordination.",
   },
 ];
 
@@ -44,60 +50,91 @@ export default function WhyChooseUs() {
   return (
     <section
       id="why"
-      className="py-24 bg-gradient-to-b from-[#faf8f3] to-white"
+      className="py-28 bg-[#0A3D2A]"
     >
       <div className="max-w-7xl mx-auto px-6">
-        {/* Section Heading */}
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <p className="uppercase tracking-[0.35em] text-[#C9952C] font-semibold mb-4">
-            Why Choose Mye Farm
+
+        {/* Heading */}
+        <div className="max-w-4xl mb-16">
+          <p className="uppercase tracking-[0.3em] text-[#D9B86A] font-semibold mb-6 text-sm">
+            WHY MYE FARM
           </p>
 
-          <h2 className="font-serif text-4xl md:text-5xl font-bold text-[#082D1A] leading-tight">
-            More than a Marketplace
+          <h2 className="font-serif text-4xl md:text-6xl font-bold text-white leading-tight">
+            A cleaner route from rural farms
+            <br />
+            to your kitchen
           </h2>
 
-          <p className="mt-6 text-gray-600 text-lg leading-relaxed">
-            Every grain we deliver carries the story of communities,
-            traditions, and farming practices that deserve to survive in a
-            rapidly industrializing world.
+          <p className="mt-8 text-white/75 text-xl leading-relaxed max-w-3xl">
+            We combine farmer-first sourcing, community partnerships,
+            and careful checks so every order carries trust from field
+            to doorstep.
           </p>
         </div>
 
         {/* Cards */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {features.map((feature, index) => {
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {features.map((feature) => {
             const Icon = feature.icon;
 
             return (
               <div
-                key={feature.id}
-                className="group bg-white rounded-3xl p-8 shadow-sm border border-gray-100 hover:shadow-2xl hover:-translate-y-3 transition-all duration-500"
+                key={feature.title}
+                className="
+                  group
+                  bg-[#F2E4BE]
+                  rounded-[28px]
+                  p-8
+                  shadow-xl
+                  border border-[#E7D49C]
+                  hover:-translate-y-4
+                  hover:shadow-[0_30px_70px_rgba(0,0,0,0.35)]
+                  transition-all
+                  duration-500
+                "
               >
-                {/* Number + Icon */}
-                <div className="flex items-center justify-between mb-8">
-                  <span className="text-gray-300 font-bold text-lg tracking-widest">
-                    {feature.number}
-                  </span>
-
-                  <div
-                    className={`w-16 h-16 rounded-2xl flex items-center justify-center transition duration-500 ${
-                      index % 2 === 0
-                        ? "bg-green-100 text-green-700 group-hover:bg-green-700 group-hover:text-white"
-                        : "bg-yellow-100 text-yellow-700 group-hover:bg-yellow-600 group-hover:text-white"
-                    }`}
-                  >
-                    <Icon size={30} strokeWidth={1.8} />
-                  </div>
+                {/* Icon */}
+                <div
+                  className="
+                    w-14 h-14
+                    rounded-2xl
+                    flex items-center justify-center
+                    mb-8
+                    bg-white/50
+                    transition-all duration-500
+                    group-hover:bg-[#0B5D35]
+                    group-hover:shadow-[0_0_25px_rgba(201,149,44,0.45)]
+                  "
+                >
+                  <Icon
+                    size={24}
+                    strokeWidth={2}
+                    className="
+                      text-[#0B5D35]
+                      transition-all duration-500
+                      group-hover:text-[#D9B86A]
+                    "
+                  />
                 </div>
 
                 {/* Title */}
-                <h3 className="font-serif text-2xl font-bold text-[#082D1A] mb-4">
+                <h3
+                  className="
+                    text-2xl
+                    font-semibold
+                    text-[#0A3D2A]
+                    mb-4
+                    transition-colors
+                    duration-500
+                    group-hover:text-[#8A6515]
+                  "
+                >
                   {feature.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-gray-600 leading-relaxed text-lg">
+                <p className="text-[#234233] leading-relaxed text-lg">
                   {feature.description}
                 </p>
               </div>
